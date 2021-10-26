@@ -45,12 +45,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <div style={{ textAlign: "right" }}>
+      {/* <div style={{ textAlign: "right" }}> */}
         <hr/>
         <img src={pictureUrl} width="60px" height="60px"/>
         <p style={{ textAlign: "left", marginLeft: "5%", wordBreak: "break-all" }}> {displayName}</p>
         <button onClick={() => logout()} style={{ width: "100%", height: 30 }}>Logout</button>
-      </div>
+      {/* </div> */}
       </header>
     </div>
   );
