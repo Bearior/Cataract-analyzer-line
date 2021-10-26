@@ -42,6 +42,7 @@ function App() {
   useEffect(() => {
     initLine();
   }, []);
+  
   return (
     <div className="App">
       <Home/>
