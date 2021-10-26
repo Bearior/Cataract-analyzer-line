@@ -1,18 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home/Home'
+import Footer from './components/Footer'
 import liff from '@line/liff';
 import { useEffect, useState } from 'react';
-import { WebcamCapture } from '../Webcam/Webcam';
-import './homeStyles.css'
 
 function App() {
-
   const [pictureUrl, setPictureUrl] = useState(logo);
   const [idToken, setIdToken] = useState("");
   const [displayName, setDisplayName] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
   const [userId, setUserId] = useState("");
-
 
   const logout = () => {
     liff.logout();
@@ -44,14 +42,11 @@ function App() {
   useEffect(() => {
     initLine();
   }, []);
-
   return (
     <div className="App">
-        <img src={pictureUrl} style={{ marginLeft: "100%" }} width="60px" height="60px"/> 
-        <p style={{ marginLeft: "100%", wordBreak: "break-all" }}> {displayName}</p>
-        <button onClick={() => logout()} style={{ width: 150, height: 30, marginLeft: "90%" }}>Logout</button>
-      </div>
-    
+      <Home/>
+      <Footer/>
+    </div>
   );
 }
 
