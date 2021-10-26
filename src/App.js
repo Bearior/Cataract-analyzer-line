@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div className="App">
-        <img src={{ marginLeft: "90%"}, pictureUrl} width="60px" height="60px"/>
+        <img src={pictureUrl} style={{ marginLeft: "90%" }} width="60px" height="60px"/>
         <p style={{ marginLeft: "90%", wordBreak: "break-all" }}> {displayName}</p>
         <button onClick={() => logout()} style={{ width: 150, height: 30, marginLeft: "90%" }}>Logout</button>
       </div> 
