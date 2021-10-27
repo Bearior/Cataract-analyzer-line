@@ -21,7 +21,7 @@ function App() {
       if (liff.isLoggedIn()) {
         runApp();
       } else {
-        liff.login();
+        liff.login({redirectUri:"https://www.youtube.com/watch?v=dQw4w9WgXcQ" });
       }
     }, err => console.error(err));
   }
