@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import liff from '@line/liff';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Button } from 'react';
 import Camera from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 import React from 'react';
+import Navigator from './routes/homestack';
 
 function App() {
   function handleTakePhoto (dataUri) {
@@ -49,16 +50,9 @@ function App() {
     initLine();
   }, []);
 
+
   return (
-    <div className="App">
-      <header className="App-header">
-      <div style={{ textAlign: "center" }}>
-      <Camera
-      onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }
-    />
-      </div>
-      </header>
-    </div>
+    <Navigator />
   );
 }
 
