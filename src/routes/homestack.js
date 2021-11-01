@@ -4,7 +4,7 @@ import camera from '../screens/camera';
 
 const screens = {
     camera :{
-        screens: camera
+        screen: camera
     }
 }
 
